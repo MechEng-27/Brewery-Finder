@@ -4,7 +4,7 @@ import Home from "./Home";
 
 export default function App(){
     return(
-        <div className = "mainApp">
+        <div className = "main__app">
             <Home />
         </div>
     );

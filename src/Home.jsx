@@ -44,13 +44,15 @@ export default function Home() {
             <nav className = "nav-bar">
                 <input type = "text" id = "nav-bar__search" 
                 placeholder = "Enter your city here"
-                onKeyDown={handleKeyDown}
-                >
+                onKeyDown={handleKeyDown}>
                 </input>
             </nav>
-            <div className = "home__content">
+            <div className = "home__content-container">
+                <div className = "home__content-cards">
                 {error ? <p>there is an error</p> : [breweryResults] }
+                </div>
             </div>
+            <footer id = "footer"></footer>
         </div>
     );
 };

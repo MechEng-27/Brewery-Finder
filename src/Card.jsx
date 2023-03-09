@@ -6,8 +6,7 @@ export default function Card(props){
         <div className = "card">
             <p>{props.name}</p>
             <p>{props.street}</p>
-            <p>{props.city}</p>
-            <p>{props.state}</p>
+            <p>{props.city}, {props.state}</p>
         </div>
     );
 };
