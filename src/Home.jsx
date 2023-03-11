@@ -31,6 +31,7 @@ export default function Home() {
     };
 
     const renderData = (data) => {
+        console.log(data)
         const dataArray = [];
         if (data.length === 0){
             setError(true)
@@ -40,9 +41,11 @@ export default function Home() {
                 return(<Card 
                     key = {brewery.id}
                     name = {brewery.name}
-                    street = {brewery.street}
                     city = {brewery.city}
                     state = {brewery.state}
+                    url = {brewery.website_url}
+                    lat = {brewery.latitude}
+                    lon = {brewery.longitude}
                 />)
             }));
         };
@@ -51,6 +54,7 @@ export default function Home() {
     return(
         <div className = "home">
             <nav className = "nav-bar">
+                <p id = "nav-bar__title">Brewery Finder</p>
                 <div id = "nav-bar__search-container">
                     <img id = "search__icon" src = "/images/iconmonstr-magnifier-2-16.png"></img>
                     <input type = "text" id = "nav-bar__search" 
@@ -60,10 +64,12 @@ export default function Home() {
                     onChange = {storeSearch}
                     value = {search}>
                     </input>
-                    <img id = {search != "" ? "clear__button" : "clear__button-inactive"} src = "/images/iconmonstr-x-mark-thin-16.png"
+                    <img id = {search != "" ? "clear__button" : "clear__button-inactive"} 
+                    src = "/images/iconmonstr-x-mark-thin-16.png"
                     onClick = {clearSearch}>
                     </img>
                 </div>
+                <p id = "nav-bar__about">About</p>
             </nav>
             <div className = "home__content-container">
                 <div className = "home__content-cards">

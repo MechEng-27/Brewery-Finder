@@ -1,15 +1,26 @@
 .home{
     min-height: 100vh;
     position: relative;
+    color: black;
 }
 
 .nav-bar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
     width: 100%;
     background: #ffc000;
+    /* background: linear-gradient(90deg, rgba(246,193,1,1) 75%, rgba(236,157,0,1) 85%, rgba(223,141,3,1) 95%, rgba(201,110,18,1) 100%); */
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
+#nav-bar__title, #nav-bar__about{
+    font-weight: 900;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #nav-bar__search-container {
@@ -28,6 +39,10 @@
     border: 0;
     outline: none;
     flex: 1;
+}
+
+#search__icon {
+    margin-right: 5px;
 }
 
 #clear__button-inactive{
@@ -52,7 +67,7 @@
 #footer{
     height: 50px;
     width: 100%;
-    background: #ffc000;
     position: absolute;
+    background: #ffc000;
     bottom: 0;
 }
