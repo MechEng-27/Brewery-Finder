@@ -6,13 +6,14 @@ import Card from "./Card";
 export default function Home() {
 
     const [error, setError] = useState(false);
-    const [search, setSearch] = useState ("")
+    const [search, setSearch] = useState("")
     const [breweryResults, setBreweryResults] = useState([]);
+
+    var currentYear = new Date().getFullYear();
     
     const breweryData = (input) => {
         fetch (`https://api.openbrewerydb.org/breweries?by_city=${input}`)
             .then(res => res.json())
-            // .then(data => console.log(data))
             .then(data => renderData(data))
     };
     
@@ -31,8 +32,6 @@ export default function Home() {
     };
 
     const renderData = (data) => {
-        console.log(data)
-        const dataArray = [];
         if (data.length === 0){
             setError(true)
         }else {
@@ -60,12 +59,12 @@ export default function Home() {
                     <input type = "text" id = "nav-bar__search" 
                     placeholder = "Enter your city here"
                     // inputMode = "search"
-                    onKeyDown={handleKeyDown}
+                    onKeyDown = {handleKeyDown}
                     onChange = {storeSearch}
                     value = {search}>
                     </input>
                     <img id = {search != "" ? "clear__button" : "clear__button-inactive"} 
-                    src = "/images/iconmonstr-x-mark-thin-16.png"
+                    src = "/images/iconmonstr-x-mark-2-12.png"
                     onClick = {clearSearch}>
                     </img>
                 </div>
@@ -76,7 +75,9 @@ export default function Home() {
                 {error ? <p>there is an error</p> : [breweryResults] }
                 </div>
             </div>
-            <footer id = "footer"></footer>
+            <footer id = "footer">
+                <p>&#169; Brewery Finder {currentYear}</p>
+            </footer>
         </div>
     );
 };

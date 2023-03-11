@@ -45,6 +45,10 @@
     margin-right: 5px;
 }
 
+#clear__button{
+    margin-right: 4px;
+}
+
 #clear__button-inactive{
     display:none;
 }
@@ -68,6 +72,9 @@
     height: 50px;
     width: 100%;
     position: absolute;
-    background: #ffc000;
     bottom: 0;
+    background: #ffc000;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
 }
