@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 100vw;
     position: relative;
     color: black;
+    background: #ffc000;
 }
 
 .nav-bar{
@@ -61,6 +61,7 @@
     /* min-height: calc(100vh - 100px); */
     flex: 1;
     padding-bottom: 50px;
+    background-color: white;
 }
 
 .home__content-cards{
@@ -72,7 +73,9 @@
 }
 
 #footer{
-    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 100%;
     position: absolute;
@@ -80,5 +83,4 @@
     background: #ffc000;
     font-size: 16px;
     font-weight: 900;
-    text-align: center;
 }
