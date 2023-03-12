@@ -3,3 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.main__app{
+  width: 100vw;
+}
