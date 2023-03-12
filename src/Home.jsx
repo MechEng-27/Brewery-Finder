@@ -6,7 +6,7 @@ import Card from "./Card";
 export default function Home() {
 
     const [error, setError] = useState(false);
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState("");
     const [breweryResults, setBreweryResults] = useState([]);
 
     var currentYear = new Date().getFullYear();
@@ -19,21 +19,23 @@ export default function Home() {
     
     const handleKeyDown = (event) => {
         if (event.key === "Enter"){
-            breweryData(event.target.value)
+            breweryData(event.target.value);
+            setSearch("");
+            event.target.blur();
         };
     };
 
     const storeSearch = (event) => {
-        setSearch(event.target.value)
+        setSearch(event.target.value);
     };
 
     const clearSearch = () => {
-        setSearch("")
+        setSearch("");
     };
 
     const renderData = (data) => {
         if (data.length === 0){
-            setError(true)
+            setError(true);
         }else {
             setError(false)
             setBreweryResults(data.map(brewery => {
@@ -81,4 +83,3 @@ export default function Home() {
         </div>
     );
 };
-
