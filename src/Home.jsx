@@ -63,22 +63,26 @@ export default function Home() {
     return(
         <div className = "home">
             <nav className = "nav-bar">
-                <p id = "nav-bar__title">Brewery Finder</p>
-                <div id = "nav-bar__search-container">
-                    <img id = "search__icon" src = "/images/iconmonstr-magnifier-2-16.png"></img>
-                    <input type = "text" id = "nav-bar__search" 
-                    placeholder = "Enter your city here"
-                    // inputMode = "search"
-                    onKeyDown = {handleKeyDown}
-                    onChange = {storeSearch}
-                    value = {search}>
-                    </input>
-                    <img id = {search != "" ? "clear__button" : "clear__button-inactive"} 
-                    src = "/images/iconmonstr-x-mark-2-12.png"
-                    onClick = {clearSearch}>
-                    </img>
+                <div className = "nav-bar__box">
+                    <p id = "nav-bar__title">Brewery Finder</p>
                 </div>
-                <a id = "nav-bar__about" onClick = {renderAbout}>About</a>
+                    <div id = "nav-bar__search-container">
+                        <img id = "search__icon" src = "/images/iconmonstr-magnifier-2-16.png"></img>
+                        <input type = "text" id = "nav-bar__search" 
+                        placeholder = "Enter your city here"
+                        // inputMode = "search"
+                        onKeyDown = {handleKeyDown}
+                        onChange = {storeSearch}
+                        value = {search}>
+                        </input>
+                        <img id = {search != "" ? "clear__button" : "clear__button-inactive"} 
+                        src = "/images/iconmonstr-x-mark-2-12.png"
+                        onClick = {clearSearch}>
+                        </img>
+                    </div>
+                <div className = "nav-bar__box">
+                    <a id = "nav-bar__about" onClick = {renderAbout}>About</a>
+                </div>
             </nav>
             <div className = "home__content-container">
                 {aboutSection ?
