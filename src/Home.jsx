@@ -89,11 +89,10 @@ export default function Home() {
                 <div id = "home__content-about">
                     <h1>Welcome to Brewery Finder</h1>
                     <p>
-                        The mission of Brewery Finder is to support breweries 
-                        of all sizes by allowing users to easily find what breweries 
-                        are local to them
+                        The mission of Brewery Finder is to support the brewing 
+                        industry by helping its users find breweries local to them
                     </p>
-                    <p>To use this application please enter your location 
+                    <p>To use this application, please enter your location 
                         (city, town or village) into the search bar above and 
                         hit enter!!!
                     </p>

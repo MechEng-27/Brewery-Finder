@@ -5,6 +5,7 @@
     width: 100%;
     position: relative;
     color: black;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 .nav-bar{
@@ -24,7 +25,7 @@
 }
 
 #nav-bar__title, #nav-bar__about{
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .nav-bar__title > #nav-bar__box {
@@ -40,15 +41,23 @@
     cursor: pointer;
 }
 
+#nav-bar__about:hover{
+    background-color: #e0a800;
+}
+
 #nav-bar__search-container {
     display: flex;
     justify-content: center;
     min-width: 205px;
     background: white;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 30px;
     padding: 5px;
     flex: 1;
+}
+
+#nav-bar__search-container:hover{
+    border: 1px solid black;
 }
 
 #nav-bar__search {
@@ -57,6 +66,7 @@
     border: 0;
     outline: none;
     flex: 1;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 #search__icon {
@@ -86,7 +96,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 #home__button-container{
@@ -111,6 +121,11 @@
     background-color: #ffc000;
     border: none;
     cursor: pointer;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.home__button:hover{
+    background-color: #e0a800;
 }
 
 #home__hyperlink{
@@ -142,7 +157,7 @@
     bottom: 0;
     background: #ffc000;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 450px) {
@@ -150,9 +165,12 @@
     #nav-bar__title {
         width: min-content;
         margin-left: 10px;
+        margin-right: 5px;
     }
     
     #nav-bar__about {
         margin-right: 10px;
+        margin-left: 5px;
     }  
+
 }
