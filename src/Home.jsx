@@ -90,7 +90,7 @@ export default function Home() {
                     <h1>Welcome to Brewery Finder</h1>
                     <p>
                         The mission of Brewery Finder is to support the brewing 
-                        industry by helping its users find breweries local to them
+                        industry by helping its users find breweries local to them.
                     </p>
                     <p>To use this application, please enter your location 
                         (city, town or village) into the search bar above and 
@@ -111,8 +111,8 @@ export default function Home() {
                 </div>: ""}
                 {error ?
                 <div id = "error__msg">
-                    <p>Unable to find a matching result</p>
-                    <p>Please check your entry and try again</p>
+                    <p>Unable to find a matching result.</p>
+                    <p>Please check your entry and try again.</p>
                 </div>: <div className = "home__content-cards">
                     {[breweryResults]}
                 </div>}
