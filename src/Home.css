@@ -51,7 +51,7 @@
     min-width: 205px;
     background: white;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 28px;
     padding: 5px;
     flex: 1;
 }
@@ -117,7 +117,7 @@
     font-size: 16px;
     font-weight: 700;
     padding: 8px 16px 8px 16px;
-    border-radius: 32px;
+    border-radius: 34px;
     background-color: #ffc000;
     border: none;
     cursor: pointer;
