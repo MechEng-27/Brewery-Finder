@@ -2,8 +2,8 @@ import React from "react";
 import "./Card.css";
 
 export default function Card(props){
-    const mapCriteria = `${props.name}/@${props.lat},${props.lon},12z`
-    const mapUrl = `https://www.google.com/maps/search/${mapCriteria}`
+    const mapCriteria = `${props.name}/@${props.lat},${props.lon},12z`;
+    const mapUrl = `https://www.google.com/maps/search/${mapCriteria}`;
     return(
         <div className = "card">
             <p className = "card__name">{props.name}</p>

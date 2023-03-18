@@ -56,6 +56,7 @@
     background: white;
     align-items: center;
     border-radius: 28px;
+    border: 2px solid #ffc000;
     padding: 5px;
     flex: 1;
 }
