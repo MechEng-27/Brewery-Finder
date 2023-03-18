@@ -8,7 +8,7 @@
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-.nav-bar{
+#nav-bar{
     display: flex;
     align-items: center;
     width: 100%;
@@ -26,19 +26,23 @@
 
 #nav-bar__title, #nav-bar__about{
     font-weight: 700;
+    padding: 10px;
 }
 
-.nav-bar__title > #nav-bar__box {
+#nav-bar__title > .nav-bar__box {
     margin-right: auto;
+    flex-wrap: wrap;
 }
 
-.nav-bar__about > #nav-bar__box {
+#nav-bar__about > .nav-bar__box {
     margin-left: auto;
     cursor: pointer;
 }
 
 #nav-bar__about {
     cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 #nav-bar__about:hover{
@@ -57,7 +61,7 @@
 }
 
 #nav-bar__search-container:hover{
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 #nav-bar__search {
@@ -158,19 +162,4 @@
     background: #ffc000;
     font-size: 16px;
     font-weight: 700;
-}
-
-@media only screen and (max-width: 450px) {
-
-    #nav-bar__title {
-        width: min-content;
-        margin-left: 10px;
-        margin-right: 5px;
-    }
-    
-    #nav-bar__about {
-        margin-right: 10px;
-        margin-left: 5px;
-    }  
-
 }

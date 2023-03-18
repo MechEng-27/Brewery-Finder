@@ -62,21 +62,23 @@ export default function Home() {
 
     return(
         <div className = "home">
-            <nav className = "nav-bar">
+            <nav id = "nav-bar">
                 <div className = "nav-bar__box">
                     <p id = "nav-bar__title">Brewery Finder</p>
                 </div>
                     <div id = "nav-bar__search-container">
-                        <img id = "search__icon" src = "/images/iconmonstr-magnifier-2-16.png"></img>
+                        <img id = "search__icon" src = "/images/iconmonstr-magnifier-2-16.png"
+                        alt = "Search icon"></img>
                         <input type = "text" id = "nav-bar__search" 
                         placeholder = "Enter your city here"
-                        // inputMode = "search"
+                        aria-label = "Enter your city here"
                         onKeyDown = {handleKeyDown}
                         onChange = {storeSearch}
                         value = {search}>
                         </input>
                         <img id = {search != "" ? "clear__button" : "clear__button-inactive"} 
                         src = "/images/iconmonstr-x-mark-2-12.png"
+                        alt = "Clear search text button"
                         onClick = {clearSearch}>
                         </img>
                     </div>
@@ -105,7 +107,8 @@ export default function Home() {
                             </button>
                         </a>
                     </div>
-                    <a id = "home__hyperlink" href = "https://www.openbrewerydb.org/">
+                    <a id = "home__hyperlink" href = "https://www.openbrewerydb.org/"
+                    target = "_blank">
                         Powered by Open Brewery DB
                     </a>
                 </div>: ""}
@@ -118,7 +121,7 @@ export default function Home() {
                 </div>}
         </div>
         <footer id = "footer">
-            <p>&#169; Brewery Finder {currentYear}</p>
+            <p>Brewery Finder {currentYear}</p>
         </footer>
     </div>
 );

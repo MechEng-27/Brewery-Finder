@@ -10,9 +10,11 @@ export default function Card(props){
             <p className = "card__loc">{props.city}, {props.state}</p>
             <div className = "card__icon-container">
                 {props.url? <a className = "card__web" href = {props.url} 
-                target = "_blank"><img src = "/images/iconmonstr-link-1-32.png"></img></a> : "" }
+                target = "_blank"><img src = "/images/iconmonstr-link-1-32.png"
+                alt = "Brewery website link"></img></a> : "" }
                 <a className = "card__map" href = {mapUrl} target = "_blank">
-                    <img src = "/images/iconmonstr-map-8-32.png"></img>
+                    <img src = "/images/iconmonstr-map-8-32.png"
+                    alt = "Google Maps link"></img>
                 </a>
             </div>
         </div>
