@@ -100,10 +100,10 @@ export default function Home() {
                     </p>
                     <div id = "home__button-container">
                         <p>Don't see your brewery listed?</p>
-                        <a href = "https://gentle-otter-5a7952.netlify.app/"
+                        <a href = "https://github.com/MechEng-27/Brewery-Finder"
                         target = "_blank">
                         <button className = "home__button">
-                            Shoot us a note
+                            Contact Us
                             </button>
                         </a>
                     </div>
