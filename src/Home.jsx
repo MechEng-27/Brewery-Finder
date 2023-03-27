@@ -4,19 +4,20 @@ import "./Home.css";
 import Card from "./Card";
 
 export default function Home() {
-
+    
+    // State constants
     const [aboutSection, setAboutSection] = useState(true);
     const [error, setError] = useState(false);
     const [search, setSearch] = useState("");
     const [breweryResults, setBreweryResults] = useState([]);
 
-    var currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
 
     const renderAbout = () => {
         setAboutSection(true);
         setError(false);
         setBreweryResults([]);
-    }
+    };
     
     const breweryData = (input) => {
         fetch (`https://api.openbrewerydb.org/breweries?by_city=${input}`)
@@ -24,6 +25,7 @@ export default function Home() {
             .then(data => renderData(data))
     };
     
+    // If enter is pressed, run brewery data function and clear search bar.
     const handleKeyDown = (event) => {
         if (event.key === "Enter"){
             setAboutSection(false);
@@ -40,12 +42,13 @@ export default function Home() {
     const clearSearch = () => {
         setSearch("");
     };
-
+    
+    // If brewery data function returns result(s), render Card component(s).
     const renderData = (data) => {
         if (data.length === 0){
             setError(true);
         }else {
-            setError(false)
+            setError(false);
             setBreweryResults(data.map(brewery => {
                 return(<Card 
                     key = {brewery.id}
@@ -55,7 +58,7 @@ export default function Home() {
                     url = {brewery.website_url}
                     lat = {brewery.latitude}
                     lon = {brewery.longitude}
-                />)
+                />);
             }));
         };
     };
@@ -67,8 +70,10 @@ export default function Home() {
                     <p id = "nav-bar__title">Brewery Finder</p>
                 </div>
                     <div id = "nav-bar__search-container">
-                        <img id = "search__icon" src = "/images/iconmonstr-magnifier-2-16.png"
-                        alt = "Search icon"></img>
+                        <img id = "search__icon" 
+                        src = "/images/iconmonstr-magnifier-2-16.png"
+                        alt = "Search icon">
+                        </img>
                         <input type = "text" id = "nav-bar__search" 
                         placeholder = "Enter your city here"
                         aria-label = "Enter your city here"
@@ -87,6 +92,8 @@ export default function Home() {
                 </div>
             </nav>
             <div className = "home__content-container">
+                {/* Render about section, error msg or brewery results 
+                depending on current state */}
                 {aboutSection ?
                 <div id = "home__content-about">
                     <h1>Welcome to Brewery Finder</h1>
@@ -124,5 +131,5 @@ export default function Home() {
             <p>Brewery Finder {currentYear}</p>
         </footer>
     </div>
-);
+    );
 };
