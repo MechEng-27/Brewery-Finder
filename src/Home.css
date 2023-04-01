@@ -65,6 +65,10 @@
     border: 2px solid black;
 }
 
+#nav-bar__search-container:focus-within{
+    border: 2px solid black;
+}
+
 #nav-bar__search {
     font-size: 16px;
     width: 144px;
@@ -114,11 +118,11 @@
 
 #home__button-container >p{
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .home__button{
     width: fit-content;
-    margin-top: 20px;
     font-size: 16px;
     font-weight: 700;
     padding: 8px 16px 8px 16px;

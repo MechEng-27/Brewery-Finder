@@ -88,7 +88,11 @@ export default function Home() {
                         </img>
                     </div>
                 <div className = "nav-bar__box">
-                    <a id = "nav-bar__about" onClick = {renderAbout}>About</a>
+                    <a id = "nav-bar__about" 
+                    tabIndex={0}
+                    onClick = {renderAbout}>
+                        About
+                    </a>
                 </div>
             </nav>
             <div className = "home__content-container">
@@ -108,10 +112,11 @@ export default function Home() {
                     <div id = "home__button-container">
                         <p>Don't see your brewery listed?</p>
                         <a href = "https://github.com/MechEng-27/Brewery-Finder"
-                        target = "_blank">
+                        target = "_blank"
+                        tabIndex={-1}>
                         <button className = "home__button">
                             Contact Us
-                            </button>
+                        </button>
                         </a>
                     </div>
                     <a id = "home__hyperlink" href = "https://www.openbrewerydb.org/"
